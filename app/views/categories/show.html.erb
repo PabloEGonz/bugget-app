@@ -1,0 +1,5 @@
+<h4><%= @category.name%></h4>
+<h5 class="text-center">Total = <%= number_to_currency(@transacts.sum(:amount)) %> </h5>
+<% @transacts.each do |transact| %>
+  <%= render 'transact', transact: transact%>
+<%end%>

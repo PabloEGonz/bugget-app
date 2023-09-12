@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: bugget_app
+  username: postgres
+  password: Managua2023
+
+test:
+  <<: *default
+  database: bugget_app
+  username: postgres
+  password: Managua2023
+
+production:
+  <<: *default
+  database: bugget_app_production
+  username: bugget_app
+  password: <%= ENV["BUGGET_APP_DATABASE_PASSWORD"] %>
