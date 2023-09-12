@@ -3,23 +3,30 @@ class CategoriesController < ApplicationController
     @categories = current_user.categories
   end
 
+  
   def show
     @category = Category.find_by(id: params[:id])
     @transacts = @category.transacts
-  end
+end
+def new
+  @new_category = Category.new
+end
 
-  def new
-    @new_category = Category.new
-  end
-
-  def create
+def create 
     category = Category.new(user: current_user)
-    category.assign_attributes
-  end
+    category.assign_attributes(categories_params)
+    if category.save 
+        redirect_to categories_path
+        flash[:success] = 'The category was created!'
+    else 
+        flash.now[:error] = 'Could not create category, try again'
+        render :new, status: :unprocessable_entity
+    end
+end
 
-  private
+private 
 
-  def categories_params
-    p
-  end
+def categories_params
+    params.require(:category).permit(:name, :icon)
+end
 end
