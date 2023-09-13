@@ -1,4 +1,6 @@
 class TransactsController < ApplicationController
+  before_action :authenticate_user!
+
   def show
     @transact = Transact.find_by(id: params[:id])
   end
