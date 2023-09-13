@@ -13,9 +13,9 @@ class TransactsController < ApplicationController
     transact = Transact.new(user: current_user)
     transact.assign_attributes(transacts_params)
     categories_id.each do |id|
-      transact.categories << Category.find_by(id: id)
+      transact.categories << Category.find_by(id:)
     end
-    
+
     if transact.save
       flash[:success] = 'The category was created!'
       redirect_to @category
@@ -25,13 +25,13 @@ class TransactsController < ApplicationController
     end
   end
 
-  private 
+  private
 
   def transacts_params
     params.require(:transact).permit(:name, :amount)
   end
 
   def categories_id
-    params.require(:transact).permit(category_ids: [])[:category_ids] 
+    params.require(:transact).permit(category_ids: [])[:category_ids]
   end
 end
