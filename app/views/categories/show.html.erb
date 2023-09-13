@@ -1,6 +1,8 @@
-<h4><%= @category.name%></h4>
+<h3><%= @category.name%></h3>
 <h5 class="text-center">Total = <%= number_to_currency(@transacts.sum(:amount)) %> </h5>
 <% @transacts.each do |transact| %>
   <%= render 'transact', transact: transact%>
 <%end%>
-<%= link_to 'Add a transaction', new_category_transact_path(@category) %>
+<div class="text-center">
+  <%= link_to 'Add a transaction', new_category_transact_path(@category) %>
+</div>

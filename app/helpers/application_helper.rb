@@ -1,12 +1,12 @@
 module ApplicationHelper
-def flash_alert_class(type)
+  def flash_alert_class(type)
     case type
     when 'error'
-        'alert-warning'
+      'alert-warning'
     when 'success'
-        'alert-success'
+      'alert-success'
     else
-        'alert-secondary'
+      'alert-secondary'
     end
-end
+  end
 end
