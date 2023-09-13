@@ -1,0 +1,23 @@
+<div class='my-5 pt-5'>
+  <h2 class='text-center'>Create new transaction</h2>
+  <%= form_with model: @new_transact, url: category_transacts_path, method: :post, local: true, scope: :transact do |f| %>
+    <div class="row g-3">
+      <div class="col-md-6 mb-3">
+        <%= f.label :name, class: "form-label" %>
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+      <div class="col-md-2 mb-3">
+        <%= f.label :amount, class: "form-label" %>
+        <%= f.number_field :amount, class: "form-control" %>
+      </div>
+      <% @categories.each do |category| %>
+        <div class="form-check">
+          <%= f.check_box :category_ids, { multiple: true }, category.id, nil %>
+          <%= label_tag "transaction_category_#{category.id}", category.name %>
+        </div>
+      <% end %>
+      <div class="text-center">
+        <%= f.submit 'Post transact', class:"btn btn-primary mb-3" %>
+      </div>
+    <% end %>
+  </div>
