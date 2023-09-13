@@ -50,3 +50,24 @@ body {
   gap: 5%;
   font-size: 1.3rem;
 }
+
+.add-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--green);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 12%;
+  width: 100%;
+}
+
+.add-button {
+  text-align: center;
+  font-size: 1.3rem;
+  height: 60%;
+  padding: 3% 12%;
+  color: #fff;
+  border: 1px solid #fff;
+}
