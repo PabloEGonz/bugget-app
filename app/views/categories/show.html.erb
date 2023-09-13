@@ -3,3 +3,4 @@
 <% @transacts.each do |transact| %>
   <%= render 'transact', transact: transact%>
 <%end%>
+<%= link_to 'Add a transaction', new_category_transact_path(@category) %>
