@@ -8,6 +8,8 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [🚀 Live Demo](#live-demo)
+  - [📹 Video Walkthrough](#walkthrough)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -19,8 +21,6 @@
   - [⭐️ Show your support ](#️-show-your-support-)
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
-
-<!-- PROJECT DESCRIPTION -->
 
 # 📖 Budget App <a name="about-project"></a>
 
@@ -43,6 +43,18 @@
 - [Categories-page]
 - [Transactions-page]
 - [User-Account-page]
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+You can see the website [here!](https://budget-app-13xl.onrender.com/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📹 Video Walkthrough <a name="walkthrough"></a>
+
+> You can find the video walkthrough at:
+
+- https://www.loom.com/share/e2b6e99baf3f47e4901d1936ce2b74ff?sid=2baa97fe-bda6-47b4-b7c8-dcdb4488143b
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
