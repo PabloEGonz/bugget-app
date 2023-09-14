@@ -1,10 +1,11 @@
 <div class="card mx-auto my-3">
   <%= link_to transact_path(transact), class: "custom-link" do %>
     <div class="card-body row">
-      <div class="text-center my-2 col-3">
-        <h5 class="card-title"><%= transact.name%> </h5>
+      <h5 class="card-title col-8"><%= transact.name%> </h5>
+      <div class="text-center my-2 col-4">
+        <p class="card-text"><%= number_to_currency(transact.amount)%> </p>
       </div>
-      <p class="card-text col-9"><%= number_to_currency(transact.amount)%> </p>
+      <span class="col-4 small"><%= transact.created_at.to_date %></span>
     </div>
   <% end %>
 </div>
