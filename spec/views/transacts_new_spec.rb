@@ -17,20 +17,20 @@ RSpec.describe 'Category', type: :system do
     end
 
     it 'After creating a new transaction, displays categorys transactions' do
-        fill_in 'transact[name]', with: 'electric bill'
-        fill_in 'transact[amount]', with: 20.30
-        check 'transact[category_ids][]'
-        click_on 'Post transaction'
-        expect(page).to have_current_path(category_path(@first_category))
-      end
+      fill_in 'transact[name]', with: 'electric bill'
+      fill_in 'transact[amount]', with: 20.30
+      check 'transact[category_ids][]'
+      click_on 'Post transaction'
+      expect(page).to have_current_path(category_path(@first_category))
+    end
 
-      it 'Check if new transaction is displayed' do
-        fill_in 'transact[name]', with: 'electric bill'
-        fill_in 'transact[amount]', with: 20.30
-        check 'transact[category_ids][]'
-        click_on 'Post transaction'
-        expect(page).to have_content('electric bill')
-        expect(page).to have_content('20.30')
-      end
+    it 'Check if new transaction is displayed' do
+      fill_in 'transact[name]', with: 'electric bill'
+      fill_in 'transact[amount]', with: 20.30
+      check 'transact[category_ids][]'
+      click_on 'Post transaction'
+      expect(page).to have_content('electric bill')
+      expect(page).to have_content('20.30')
+    end
   end
 end

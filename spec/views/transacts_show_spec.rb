@@ -20,13 +20,13 @@ RSpec.describe 'Category', type: :system do
     end
 
     it 'shows the transactions info under that category' do
-        click_on @transaction.name
-    expect(page).to have_current_path(transact_path(@transaction))
+      click_on @transaction.name
+      expect(page).to have_current_path(transact_path(@transaction))
     end
 
     it 'display the transactions info' do
-        visit transact_path(@transaction)
-        expect(page).to have_content(@transaction.name)
+      visit transact_path(@transaction)
+      expect(page).to have_content(@transaction.name)
       expect(page).to have_content(@transaction.amount)
     end
   end
