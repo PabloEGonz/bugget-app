@@ -1,9 +1,7 @@
 <% if user_signed_in? %>
   <nav class="navbar fixed-top">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-        <%= image_tag "toggle.png", class: 'navtoggler' %>
-      </button>
+      <%= render partial: navbar_helper(request.path) %>
       <a class="navbar-brand text-light" href="/">Bugget App</a>
       <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
