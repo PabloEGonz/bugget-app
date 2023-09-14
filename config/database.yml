@@ -17,6 +17,7 @@ test:
 
 production:
   <<: *default
-  database: bugget_app_production
+  url: <%= ENV['DATABASE_URL'] %>
+  database: bugget_app
   username: bugget_app
   password: <%= ENV["BUGGET_APP_DATABASE_PASSWORD"] %>
