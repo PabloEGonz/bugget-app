@@ -9,6 +9,7 @@ module ApplicationHelper
       'alert-secondary'
     end
   end
+
   def navbar_helper(path)
     if path.include?('transacts') || path.include?('categories/')
       'shared/back'
