@@ -1,0 +1,13 @@
+<div class="card mx-auto my-3 category">
+  <%= link_to category_path(category), class: "custom-link" do %>
+    <div class="card-body row">
+      <div class="col-4">
+        <img src="<%= category.icon%>" alt="<%= category.icon%>", class="img-fluid">
+      </div>
+      <div class="text-center my-2 col-8">
+        <h5 class="card-title"><%= category.name%> </h5>
+        <p class="card-text">Transactions: <%= category.transacts.count%> </p>
+      </div>
+    </div>
+  <% end %>
+</div>

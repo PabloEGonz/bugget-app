@@ -1,0 +1,18 @@
+<div class='my-5 pt-5'>
+  <h2 class='text-center'>Create new category</h2>
+  <%= form_with model: @new_category, url: categories_path, method: :post, local: true, scope: :category do |f| %>
+    <div class="row g-3">
+      <div class="col-md-5 mb-3">
+        <%= f.label :name, class: "form-label" %>
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+      <div class="col-md-6 mb-3">
+        <%= f.label :icon, class: "form-label" %>
+        <%= f.text_field :icon, class: "form-control", placeholder: 'URL'  %>
+      </div>
+      <div class="text-center">
+        <%= f.submit 'Create category', class:"button button-green" %>
+      </div>
+    </div>
+  <% end %>
+</div>

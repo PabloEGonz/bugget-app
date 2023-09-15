@@ -1,0 +1,12 @@
+<div class="card mx-auto my-3">
+  <div class="card-body row">
+    <h5 class="card-title col-8"><%= @transact.name%></h5>
+    <div class="my-2 col-4">
+      <p class="card-text"><%= number_to_currency(@transact.amount)%> </p>
+    </div>
+    <p class="small mt-auto">Categories: 
+      <% categories_array = @transact.categories.map {|category| category.name}%>
+      <%= categories_array.join(', ') %>
+    </p>
+  </div>
+</div>
