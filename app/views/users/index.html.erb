@@ -2,10 +2,10 @@
   <h2 class="text-center">Bugget App</h2>
   <p class="text-center px-5 my-5">You're not logged in, please log into your account or sign in.</p>
   <div class="row g-3 mt-4">
-    <div class="col-md-10 mt-4 text-center">
-      <%= button_to "Sign in", new_user_session_path, class:'button button-blue splash' %>
+    <div class="col-md-10 mt-4 text-center text-lg-end col-lg-6">
+      <%= link_to "Sign in", new_user_session_path, class:'button button-blue custom-link text-light splash sign-in' %>
     </div>
-    <div class="col-md-10 mt-4 text-center">
+    <div class="col-md-10 mt-4 text-center text-lg-start col-lg-6">
       <%= link_to "Sign up", new_user_registration_path, class:'button button-blue custom-link text-light splash'%>
     </div>
   </div>

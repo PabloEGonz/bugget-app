@@ -77,6 +77,19 @@ body {
 }
 
 .splash {
-  margin-top: 90%;
+  margin-top: 90% !important;
   padding: 4% 40% !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .splash {
+    margin-top: 5%;
+    padding: 2% 5% !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sign-in {
+    display: inline-block;
+  }
 }
