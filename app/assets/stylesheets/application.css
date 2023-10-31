@@ -80,6 +80,9 @@ body {
   margin-top: 90% !important;
   padding: 4% 40% !important;
 }
+.splash-page {
+  background-image: url(wallpaper.png);
+}
 
 @media only screen and (min-width: 768px) {
   .splash {

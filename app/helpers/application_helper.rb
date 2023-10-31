@@ -6,4 +6,12 @@ module ApplicationHelper
       'shared/toggle'
     end
   end
+
+  def wallpaper
+    if ['/', '/users/sign_in', '/users/sign_up'].include? request.fullpath
+      'splash-page'
+    else
+      ''
+    end
+  end
 end
