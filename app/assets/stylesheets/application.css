@@ -110,4 +110,8 @@ body {
     color: #fff;
     border: 1px solid #fff;
   }
+
+  .category-container {
+    padding-bottom: 30% !important;
+  }
 }
