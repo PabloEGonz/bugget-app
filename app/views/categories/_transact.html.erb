@@ -1,7 +1,7 @@
-<div class="card mx-auto my-3">
+<div class="card mx-auto my-3 my-lg-2 col-lg-5 mx-lg-2">
   <%= link_to transact_path(transact), class: "custom-link" do %>
     <div class="card-body row">
-      <h5 class="card-title col-8"><%= transact.name%> </h5>
+      <h5 class="card-title col-8"><%= transact.name %> </h5>
       <div class="text-center my-2 col-4">
         <p class="card-text"><%= number_to_currency(transact.amount)%> </p>
       </div>
