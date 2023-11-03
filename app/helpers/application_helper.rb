@@ -1,7 +1,9 @@
 module ApplicationHelper
   def navbar_helper(path)
-    if path.include?('transacts') || path.include?('categories/')
+    if path.include?('transacts')
       'shared/back'
+    elsif path.include?('categories/')
+      'shared/back_home'
     else
       'shared/toggle'
     end
