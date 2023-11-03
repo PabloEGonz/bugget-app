@@ -83,6 +83,10 @@ body {
   input.button {
     padding: 1% 2% !important;
   }
+
+  .add-button {
+    border-radius: 5px;
+  }
 }
 
 @media screen and (max-width: 767px) {
